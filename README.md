@@ -7,9 +7,13 @@ This repository provides learning notebooks with examples, detailed explanations
 
 ## 📂 Repository Structure
 
-`notebook/tasks/` Contains challenge notebooks. These are designed to help you practice, solve problems, and build your own implementations after studying the logic lessons.
+`notebook/logic/` Contains guided notes with sample code and commentary. Each notebook introduces a new concept and demonstrates how it applies to real-world systems programming and secure software design.
 
-`notebook/logic/` Contains guided notebooks with sample code and commentary. Each notebook introduces a new concept and demonstrates how it applies to real-world systems programming and secure software design.
+`notebook/tasks/` Contains challenge notes. These are designed to help you practice, solve problems, and build your own implementations after studying the logic lessons.
+
+`notebook/tools/` Contains Python scripts used to work on the notebook.
+
+`subprojects/` Contains wrap files needed for the lessons.
 
 ⸻
 
