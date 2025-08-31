@@ -6,10 +6,9 @@ This repository provides learning notebooks with examples, detailed explanations
 ⸻
 
 ## 📂 Repository Structure
-	•	notebook/logic/
-Contains guided notebooks with sample code and commentary. Each notebook introduces a new concept and demonstrates how it applies to real-world systems programming and secure software design.
-	•	notebook/tasks/
-Contains challenge notebooks. These are designed to help you practice, solve problems, and build your own implementations after studying the logic lessons.
+
+	.	`notebook/logic/` Contains guided notebooks with sample code and commentary. Each notebook introduces a new concept and demonstrates how it applies to real-world systems programming and secure software design.
+ .	`notebook/tasks/` Contains challenge notebooks. These are designed to help you practice, solve problems, and build your own implementations after studying the logic lessons.
 
 ⸻
 
