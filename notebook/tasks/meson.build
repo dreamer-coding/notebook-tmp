@@ -1,6 +1,6 @@
 # Run wildcard.py to collect test source files
 tasks_cards = run_command(
-    ['python3', '..', 'tools' / 'wildcard.py'],
+    ['python3', '..' / 'tools' / 'wildcard.py'],
     check: true
 )
 
