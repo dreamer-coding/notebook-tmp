@@ -11,7 +11,7 @@ run_command(
 )
 
 # Split stdout into a list of filenames and include main.c
-all_sources = ['main.c'] + tasks_cards.stdout().strip().split('\n')
+all_sources = ['runner.c'] + tasks_cards.stdout().strip().split('\n')
 
 # Filter only supported extensions (.c, .cpp, .m, .mm)
 tasks_source = []
