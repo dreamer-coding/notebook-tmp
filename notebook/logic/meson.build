@@ -5,25 +5,30 @@ logic_cards = run_command(
 )
 
 # Split stdout into a list of filenames
-logic_source = [logic_cards.stdout().strip().split('\n')]
+all_sources = logic_cards.stdout().strip().split('\n')
 
-# Filter only supported extensions
-logic_source = [f for f in logic_source if f.endswith(('.c', '.cpp', '.m', '.mm'))]
+# Filter only .c, .cpp, .m, .mm files
+logic_source = []
+foreach f : all_sources
+    ext = f.split('.')[-1]
+    if ext == 'c' or ext == 'cpp' or ext == 'm' or ext == 'mm'
+        logic_source += [f]
+    endif
+endforeach
 
-# Function to get suffix based on extension
+# Map extensions to suffixes for executable names
 suffix_map = {
-    '.c': '_c',
-    '.cpp': '_cpp',
-    '.m': '_objc',
-    '.mm': '_objcpp'
+    'c': '_c',
+    'cpp': '_cpp',
+    'm': '_objc',
+    'mm': '_objcpp'
 }
 
 # Create an executable for each source file
 foreach src : logic_source
-    file_obj = files(src)
-    base_name = file_obj.name().replace(file_obj.extension(), '')
-    exe_name = base_name + suffix_map[file_obj.extension()]
-    
+    fname = files(src).name()
+    ext = files(src).extension()
+    exe_name = fname.replace(ext, '') + suffix_map[ext]
     executable(
         exe_name,
         src,
