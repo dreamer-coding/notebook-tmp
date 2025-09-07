@@ -1,10 +1,20 @@
-# Use wildcard.py to collect all test source files for the directory
-tasks_cards = run_command(['python3', meson.source_root() / '..' / 'tools' / 'wildcard.py'], check: true)
+# Collect all test source files using wildcard.py
+tasks_cards = run_command(
+    ['python3', meson.source_root() / '..' / 'tools' / 'wildcard.py'],
+    check: true
+)
+run_command(
+    ['python3', meson.source_root() / '..' / 'tools' / 'runner.py'],
+    check: true
+)
 
-# Split the stdout into a list of filenames
+# Split stdout into a list of filenames and include main.c
 tasks_source = ['main.c'] + tasks_cards.stdout().strip().split('\n')
 
-# Create executable for pizza tests
+# Filter only supported extensions
+tasks_source = [f for f in tasks_source if f.endswith(('.c', '.cpp', '.m', '.mm'))]
+
+# Single executable with all sources
 challenge = executable(
     'notebook',
     tasks_source,
