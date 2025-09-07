@@ -1,10 +1,10 @@
 # Collect all test source files using wildcard.py
 tasks_cards = run_command(
-    ['python3', meson.source_root() / '..' / 'tools' / 'wildcard.py'],
+    ['python3', meson.project_source_root() / '..' / 'tools' / 'wildcard.py'],
     check: true
 )
 run_command(
-    ['python3', meson.source_root() / '..' / 'tools' / 'runner.py'],
+    ['python3', meson.project_source_root() / '..' / 'tools' / 'runner.py'],
     check: true
 )
 
