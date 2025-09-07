@@ -1,20 +1,28 @@
-# Collect all test source files using wildcard.py
+# Run wildcard.py to collect test source files
 tasks_cards = run_command(
-    ['python3', '..' / 'tools' / 'wildcard.py'],
+    ['python3', '..', 'tools' / 'wildcard.py'],
     check: true
 )
+
+# Run runner.py (if needed)
 run_command(
     ['python3', '..' / 'tools' / 'runner.py'],
     check: true
 )
 
 # Split stdout into a list of filenames and include main.c
-tasks_source = ['main.c'] + tasks_cards.stdout().strip().split('\n')
+all_sources = ['main.c'] + tasks_cards.stdout().strip().split('\n')
 
-# Filter only supported extensions
-tasks_source = [f for f in tasks_source if f.endswith(('.c', '.cpp', '.m', '.mm'))]
+# Filter only supported extensions (.c, .cpp, .m, .mm)
+tasks_source = []
+foreach f : all_sources
+    ext = f.split('.')[-1]
+    if ext == 'c' or ext == 'cpp' or ext == 'm' or ext == 'mm'
+        tasks_source += [f]
+    endif
+endforeach
 
-# Single executable with all sources
+# Create a single executable with all sources
 challenge = executable(
     'notebook',
     tasks_source,
