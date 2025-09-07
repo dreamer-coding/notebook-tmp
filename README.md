@@ -18,20 +18,21 @@ This repository provides learning notebooks with examples, detailed explanations
 ⸻
 
 ## 🚀 Getting Started
-	1.	Clone the repository:
+	
+Clone the repository:
 
 ```zsh
 git clone https://github.com/fossillogic/notebook.git
 cd <repo>
 ```
 
-	2.	Open the notebooks with VSCode:
+Open the notebooks with VSCode:
 
 ```zsh
 code .
 ```
 
-	3.	Explore the notebook/logic folder first for guided learning, then attempt the challenges in notebook/tasks.
+Explore the notebook/logic folder first for guided learning, then attempt the challenges in notebook/tasks.
 
 ⸻
 
