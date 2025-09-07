@@ -1,6 +1,6 @@
 # Collect all source files using wildcard.py
 logic_cards = run_command(
-    ['python3', meson.source_root() / '..' / 'tools' / 'wildcard.py'],
+    ['python3', meson.project_source_root() / '..' / 'tools' / 'wildcard.py'],
     check: true
 )
 
