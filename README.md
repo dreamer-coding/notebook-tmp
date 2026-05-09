@@ -1,5 +1,5 @@
 <p align="center">
-    <img src=".github/51E406DA-7D05-49C0-BF27-092B4D77F8D2.png" alt="Fossil Learning Logo" width="620"/>
+    <img src=".github/51E406DA-7D05-49C0-BF27-092B4D77F8D2.png" alt="Fossil Learning Logo" width="630"/>
 </p>
 
 # Fossil Learning — Logic Notebook
