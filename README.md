@@ -1,3 +1,7 @@
+<p align="center">
+    <img src=".github/51E406DA-7D05-49C0-BF27-092B4D77F8D2.png" alt="Fossil Learning Logo" width="620"/>
+</p>
+
 # Fossil Learning — Logic Notebook
 
 Fossil Learning is a space for bold experiments and deeply engineered software, where truth, security, and transparency guide every lesson.
