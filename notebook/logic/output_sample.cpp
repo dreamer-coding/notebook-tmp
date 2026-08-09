@@ -1,5 +1,6 @@
 #include "fossil/io/output.h"
 #include <iostream>
+
 using namespace fossil::io;
 
 int main() {
