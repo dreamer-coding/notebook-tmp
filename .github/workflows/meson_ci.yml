@@ -25,13 +25,13 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install dependencies
-        run: python3 -m pip install meson==1.8.0 ninja
+        run: python3 -m pip install meson==1.10.0 ninja
       - name: Configure Project
         run: meson setup builddir/
         env:
           CC: gcc
       - name: Run Tests
-        run: meson test -C builddir -v --test-args='show --mode tree --result fail'
+        run: meson test -C builddir -v --test-args='show --mode tree --result fail theme mint'
       - name: Upload Test Log
         uses: actions/upload-artifact@v4
         if: failure()
