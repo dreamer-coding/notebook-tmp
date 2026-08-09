@@ -38,5 +38,3 @@ jobs:
         with:
           name: ${{ matrix.os }}_Meson_Testlog
           path: builddir/meson-logs/testlog.txt
-
-
